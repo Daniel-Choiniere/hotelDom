@@ -43,3 +43,5 @@ rmList += "</ul>";
 
 document.getElementById("rmsAvail").innerHTML = rmList;
 
+// create a new method that uses the rmlist functionality to update the roomlist
+// change from unorderd list to drop down
