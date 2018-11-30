@@ -1,5 +1,5 @@
 var hotel = {
-    name: "CareerDevs Mega Hotel",
+    name: "CareerDevs JavaScript Hotel",
     rating: 5.0,
     numberOfRooms: 5,
     roomRate: 325.00,
@@ -32,16 +32,28 @@ var hotel = {
 
 document.getElementById("hotelName").innerText = hotel.name;
 
+function selectRoom() {
+    var roomPicked = document.getElementById("mySelect").value;
+    document.getElementById("demo").innerHTML = "You picked room " + roomPicked + ".";
+    this.roomNumbersAvailable.splice(this.roomNumbersAvailable.indexOf(roomPicked), 1);
+    this.roomNumbersBooked.push(roomPicked);
+}
+
+
 // rmsAvail
-var rmList = "<select>";
+
+var rmList = "<select id='mySelect'>";
 for (var i=0; i < hotel.roomNumbersAvailable.length; i++) {
     
-    rmList += "<option>" + hotel.roomNumbersAvailable[i] + "</option>";
-    
+    rmList += '<option value="' + hotel.roomNumbersAvailable[i] + '">' + hotel.roomNumbersAvailable[i] + "</option>";
 }
 rmList += "</select>";
 
 document.getElementById("rmsAvail").innerHTML = rmList;
+
+
+
+
 
 
 // create a new method that uses the rmlist functionality to update the roomlist

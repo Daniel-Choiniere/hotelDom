@@ -43,5 +43,13 @@ rmList += "</ul>";
 
 document.getElementById("rmsAvail").innerHTML = rmList;
 
+var selectRoomList = "<form> <select id='selectedRoom'>";
+for (var i=0; i < hotel.roomNumbersAvailable.length; i++) {
+    selectRoomList += "<option value=='" + hotel.roomNumbersAvailable[i] + "'>" + hotel.roomNumbersAvailable[i] + "</option>";
+    
+}
+selectRoomList += "</select> </form>";
+
+document.getElementById("selectARoom").innerHTML = selectRoomList;
 // create a new method that uses the rmlist functionality to update the roomlist
 // change from unorderd list to drop down
