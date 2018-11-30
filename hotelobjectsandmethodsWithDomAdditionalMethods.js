@@ -33,14 +33,13 @@ var hotel = {
 document.getElementById("hotelName").innerText = hotel.name;
 
 function selectRoom() {
-    var roomPicked = document.getElementById("mySelect").value;
+    var roomPicked = document.getElementById("mySelect");
     document.getElementById("demo").innerHTML = "You picked room " + roomPicked + ".";
-    this.roomNumbersAvailable.splice(this.roomNumbersAvailable.indexOf(roomPicked), 1);
-    this.roomNumbersBooked.push(roomPicked);
+    roomPicked.remove(roomPicked.selectedIndex);   
+    // this.roomNumbersAvailable.splice(this.roomNumbersAvailable.indexOf(roomPicked), 1);
+    // this.roomNumbersBooked.push(roomPicked);
 }
 
-
-// rmsAvail
 
 var rmList = "<select id='mySelect'>";
 for (var i=0; i < hotel.roomNumbersAvailable.length; i++) {
