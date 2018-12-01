@@ -32,21 +32,32 @@ var hotel = {
 
 document.getElementById("hotelName").innerText = hotel.name;
 
+
+// Select a user clicked specific room option from a dropdown
 function selectRoom() {
-    var roomPicked = document.getElementById("mySelect");
+    // Remove item from dropdown
+    var roomPickedRemove = document.getElementById("mySelect");
+    roomPickedRemove.remove(roomPickedRemove.selectedIndex);
+    // Get selected room form user dropdown selection
+    var roomPicked = document.getElementById("mySelect").value;
     document.getElementById("demo").innerHTML = "You picked room " + roomPicked + ".";
-    roomPicked.remove(roomPicked.selectedIndex);   
-    // this.roomNumbersAvailable.splice(this.roomNumbersAvailable.indexOf(roomPicked), 1);
-    // this.roomNumbersBooked.push(roomPicked);
+    // Test 
+    console.log(roomPicked);
+    console.log(hotel.roomNumbersAvailable.indexOf(roomPicked));
+    // Remove selected room from roomNumbersAvailable 
+    // Push selected room into roomNumbersBooked
+    hotel.roomNumbersAvailable.splice(hotel.roomNumbersAvailable.indexOf(roomPicked), 1);
+    hotel.roomNumbersBooked.push(roomPicked);
+    
 }
 
 
-var rmList = "<select id='mySelect'>";
+var rmList = "<form> <select id='mySelect'>";
 for (var i=0; i < hotel.roomNumbersAvailable.length; i++) {
     
     rmList += '<option value="' + hotel.roomNumbersAvailable[i] + '">' + hotel.roomNumbersAvailable[i] + "</option>";
 }
-rmList += "</select>";
+rmList += "</select> </form>";
 
 document.getElementById("rmsAvail").innerHTML = rmList;
 

@@ -45,7 +45,7 @@ document.getElementById("rmsAvail").innerHTML = rmList;
 
 var selectRoomList = "<form> <select id='selectedRoom'>";
 for (var i=0; i < hotel.roomNumbersAvailable.length; i++) {
-    selectRoomList += "<option value=='" + hotel.roomNumbersAvailable[i] + "'>" + hotel.roomNumbersAvailable[i] + "</option>";
+    selectRoomList += "<option value='" + hotel.roomNumbersAvailable[i] + "'>" + hotel.roomNumbersAvailable[i] + "</option>";
     
 }
 selectRoomList += "</select> </form>";
