@@ -7,13 +7,11 @@ var venue = {
         // length of the number of seats available, returned as an integer (1,5,20, etc)
         return this.ticketsAvaliable.length;
     }
-}
+};
 
 // Select a user clicked specific seat option from a dropdown
 function selectSeat() {
-// Remove selected item from dropdown
-    var ticketPurchasedRemoved = document.getElementById("mySelect");
-    ticketPurchasedRemoved.remove(ticketPurchasedRemoved.selectedIndex);
+
     // Get selected seat from user
     var seatPicked = document.getElementById("mySelect").value;
     document.getElementById("demo").innerHTML = "You picked seat " + seatPicked + ".";
@@ -24,7 +22,10 @@ function selectSeat() {
     // Push selected room into ticketsPurchased
     venue.ticketsAvaliable.splice(venue.ticketsAvaliable.indexOf(seatPicked), 1);
     venue.ticketsPurchased.push(seatPicked);
-        
+    
+    // Remove selected item from dropdown
+    var ticketPurchasedRemoved = document.getElementById("mySelect");
+    ticketPurchasedRemoved.remove(ticketPurchasedRemoved.selectedIndex);
 }
 
 

@@ -35,9 +35,6 @@ document.getElementById("hotelName").innerText = hotel.name;
 
 // Select a user clicked specific room option from a dropdown
 function selectRoom() {
-    // Remove item from dropdown
-    var roomPickedRemove = document.getElementById("mySelect");
-    roomPickedRemove.remove(roomPickedRemove.selectedIndex);
     // Get selected room form user dropdown selection
     var roomPicked = document.getElementById("mySelect").value;
     document.getElementById("demo").innerHTML = "You picked room " + roomPicked + ".";
@@ -48,6 +45,10 @@ function selectRoom() {
     // Push selected room into roomNumbersBooked
     hotel.roomNumbersAvailable.splice(hotel.roomNumbersAvailable.indexOf(roomPicked), 1);
     hotel.roomNumbersBooked.push(roomPicked);
+    
+     // Remove item from dropdown
+    var roomPickedRemove = document.getElementById("mySelect");
+    roomPickedRemove.remove(roomPickedRemove.selectedIndex);
     
 }
 
@@ -60,11 +61,3 @@ for (var i=0; i < hotel.roomNumbersAvailable.length; i++) {
 rmList += "</select> </form>";
 
 document.getElementById("rmsAvail").innerHTML = rmList;
-
-
-
-
-
-
-// create a new method that uses the rmlist functionality to update the roomlist
-// change from unorderd list to drop down
