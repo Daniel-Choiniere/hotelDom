@@ -77,7 +77,7 @@ var hotel = {
             roomsBooked += "</select> </form>";
             
             document.getElementById("roomsBooked").innerHTML = roomsBooked;
-            document.getElementById("demo").innerHTML = "Thank you for your stay. I hope you have enjoyed room " + roomReturned + " Please come back soon!";
+            document.getElementById("demo").innerHTML = "Thank you for your stay. I hope you have enjoyed room " + roomReturned + ". Please come back soon!";
     }
 };
 
