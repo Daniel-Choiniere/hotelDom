@@ -45,9 +45,9 @@ var hotel = {
             roomsBooked += "</select> </form>";
 
             document.getElementById("roomsBooked").innerHTML = roomsBooked;
-            document.getElementById("demo").innerHTML = "You will love room  " + roomPicked + " it is a wonderful choice.";
-
-
+            document.getElementById("demo").innerHTML = "You will love room  " + roomPicked + " it is a wonderful choice!";
+        } else {
+            document.getElementById("demo").innerHTML = "I'm sorry there are no rooms currently available, please check back soon.";
         }
     },
     
