@@ -8,7 +8,7 @@
         
         <style>
             body {
-                background-color: #f2f5f9;
+                background-color: #5b758c;
             }
             h1 {
                 color: #021d47;
@@ -16,6 +16,7 @@
                 background-color: #d5ddea;
                 padding-top: 35px;
                 padding-bottom: 35px;
+                overflow: hidden;
             }
             
             .carousel {
@@ -32,20 +33,32 @@
             }
             
             .rooms {
-                color: teal;
+                color: #021d47;;
                 font-family: Palatino;
             }
             
+            .selectButton {
+                border: none;
+                background-color: transparent;   
+            }
+            
+            .selectButton:hover {
+                border-radius: 0px;
+                background-color: #008CBA;
+                color: white;
+                cursor: pointer;
+            }
+            
             #roomsAvail {
-                float: left; 
-                padding-left: 200px; 
-                padding-top: 90px;
+                float: left;
+                padding-bottom: 100px;
+                padding-left: 300px;
             }
             
             #roomsBkd { 
                  float: right;
-                 padding-right: 200px; 
-                 padding-top: 90px;
+                 padding-bottom: 100px;
+                 padding-right: 300px;
             }
             
             #roomTitle {
@@ -60,14 +73,14 @@
             
             .slide-prev {
                 position: absolute;
-                top: 400px;
+                top: 200px;
                 left: 0;
                 z-index: 100;
             }
 
             .slide-next {
                 position: absolute;
-                top: 400px;
+                top: 200px;
                 right: 0;
                 z-index: 100;
             }
@@ -82,28 +95,7 @@
             <p>Code the night away, in our technology inspired rooms.</p>
             </br>
             
-            <div id="roomsAvail">
-                <h3 id="roomTitle" class="rooms">Rooms Available</h3>
-                <h5 class ="rooms">Please Select An Available Room</h5>
-                
-               <!--Start of select method aka Drop Down Menus-->
-                    <div id="rmsAvail"></div>
-                    <button type="button" onclick="hotel.bookRoom()">Select A Room</button>
-            </div>
-            
-            <div id="roomsBkd">
-                <h3  id="roomTitle" class="rooms">Rooms Currently Booked</h3>
-                <h5 class ="rooms">Please Select Room to Checkout</h5>
-                
-                <div id="roomsBooked"></div>
-                <p id="rmBooked"></p>
-                
-                <button type="button" onclick="hotel.checkoutRoom()">Checkout</button>
-            </div> 
-       
-            <p id="demo"></p>
-            
-            <!-- Begin Carousel Section -->
+                  <!-- Begin Carousel Section -->
 
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -133,8 +125,42 @@
             </div>
         
             <!-- End Carousel Section -->
+            </br>
+            </br>
+            </br>
+            </br>
+        
+            <!--Where user response/confirmation will apper once user chooses a room-->
+            <p id="demo"></p>
             
-            <!-- Footer -->
+            <!--rooms avail dropdown section-->
+            <div id="roomsAvail">
+                <h3 id="roomTitle" class="rooms">Rooms Available</h3>
+                <h5 class ="rooms">Please Select An Available Room</h5>
+                
+               <!--Start of select method aka Drop Down Menus-->
+                    <div id="rmsAvail"></div>
+                    <button type="button" class="selectButton" onclick="hotel.bookRoom()">Select A Room</button>
+            </div>
+            
+            <!--rooms booked dropdown section-->
+            <div id="roomsBkd">
+                <h3  id="roomTitle" class="rooms">Rooms Currently Booked</h3>
+                <h5 class ="rooms">Please Select Room to Checkout</h5>
+                
+                <div id="roomsBooked"></div>
+                <p id="rmBooked"></p>
+                
+                <button type="button" class="selectButton" onclick="hotel.checkoutRoom()">Checkout</button>
+            </div> 
+            
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            
+             <!--Footer -->
             <nav class="navbar fixed-bottom navbar-dark bg-dark">
                 <a class="navbar-brand" href="https://github.com/Daniel-Choiniere">2018 Daniel Choiniere</a>
             </nav>

@@ -81,7 +81,6 @@ var hotel = {
     }
 };
 
-document.getElementById("hotelName").innerText = hotel.name;
 
 // Select a user clicked specific room option from a dropdown
 // Begin available rooms select dropdown
