@@ -16,8 +16,6 @@
         
         .slide { grid-area: slide; }
         
-        .info { grid-area: info; }
-
         .footer { grid-area: footer; }
 
         .grid-container {
@@ -25,7 +23,6 @@
             grid-template-areas: 'header header header header header header'
                                  'slide slide slide slide slide slide'
                                  'left left left right right right' 
-                                 'info info info info info info'
                                  'footer footer footer footer footer footer';
             grid-gap: 0px;
            
@@ -50,12 +47,12 @@
             margin-top: -5px;
         }
         
-         .carousel {
-                width: 300px;
-                height: 250px;
-                margin: auto;
-                justify-content: center;
-            }
+     .carousel {
+            width: 300px;
+            height: 250px;
+            margin: auto;
+            justify-content: center;
+        }
             
         .slide-prev {
             position: absolute;
@@ -90,7 +87,7 @@
         /*}*/
     
         #demo {
-            font-size: 20px;
+            font-size: 16px;
             font-family: Trebuchet MS;
             color: #891b2c;
         }
@@ -133,6 +130,9 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="sr-only">Next</span>
                     </a>
+                    
+                    <!-- Info Displayed to User Here -->
+                       <p id="demo"></p>
                 </div>
             </div>
             
@@ -161,7 +161,7 @@
             </div>
              
             <div class="info">
-                <p id="demo"></p>
+             
             </div>
             
             <div class="footer">
