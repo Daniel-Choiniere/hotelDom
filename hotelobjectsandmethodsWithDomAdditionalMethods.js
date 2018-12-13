@@ -67,10 +67,10 @@ var hotel = {
             this.roomNumbersAvailable = this.roomNumbersAvailable.concat(this.roomNumbersBooked.splice(this.roomNumbersBooked.indexOf(roomReturned), 1));
 
 
-            // update rooms AVAIL dropdown  // essentially removing the selected room
+            // update rooms AVAIL dropdown  // essentially adding the selected room to roomNumbersAvailable
             this.updateAvaliableRoomsList();
             
-            // update rooms BOOKED dropdown  // essentially removing the selected room
+            // update rooms BOOKED dropdown  // essentially removing the selected room from the booked dropdown
             this.updateBookedRoomsList();
             document.getElementById("demo").innerHTML = "Thank you for your stay. I hope you have enjoyed room " + roomReturned + ". Please come back soon!";
     }
